@@ -1,0 +1,11 @@
+{
+  "name": "js-time-converter",
+  "version": "1.0.0",
+  "description": "Time Converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
