@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# TypeScript compiled files
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sw?
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Test related
+jest-cache/
+jest-config.json
+coverage-final.json
+
+# Parcel, Vite, Webpack cache
+.cache/
+.parcel-cache/
+.vite/
+
+# Optional lockfiles (if using one package manager)
+# Uncomment the ones you're NOT using
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# TypeScript declaration output (optional)
+*.d.ts
+
+# Misc
+*.local
