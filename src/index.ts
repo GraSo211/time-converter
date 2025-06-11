@@ -4,7 +4,7 @@ export * from "./second-converter/second";
 export * from "./minute-converter/minute";
 export * from "./hour-converter/hour";
 export * from "./day-converter/day";
-export * from "./week-converter/ms";
+export * from "./week-converter/week";
 export * from "./year-converter/ms";
 export * from "./month-converter/ms";
 
