@@ -1,37 +1,53 @@
-// ms, s, min, h, d, w, m, y
+/**
+ * Convierte días a milisegundos.
+ * @param day - Tiempo en días.
+ * @returns Tiempo en milisegundos.
+ */
 export const dayToMiliSecond = (day: number): number => {
-    return dayToSecond(day) * 60;
+    return dayToSecond(day) * 1000;
 };
 
+/**
+ * Convierte días a segundos.
+ * @param day - Tiempo en días.
+ * @returns Tiempo en segundos.
+ */
 export const dayToSecond = (day: number): number => {
     return dayToMinute(day) * 60;
 };
 
+/**
+ * Convierte días a minutos.
+ * @param day - Tiempo en días.
+ * @returns Tiempo en minutos.
+ */
 export const dayToMinute = (day: number): number => {
     return dayToHour(day) * 60;
 };
 
+/**
+ * Convierte días a horas.
+ * @param day - Tiempo en días.
+ * @returns Tiempo en horas.
+ */
 export const dayToHour = (day: number): number => {
     return day * 24;
 };
 
+/**
+ * Convierte días a semanas.
+ * @param day - Tiempo en días.
+ * @returns Tiempo en semanas.
+ */
 export const dayToWeek = (day: number): number => {
     return day / 7;
 };
 
-//jan feb mar apr may jun jul aug sep oct nov dec
-export const dayToMonth = (day: number, month: string): number => {
-    if (month in ["jan", "mar", "may", "jul", "aug", "oct", "dec"]) {
-        return day / 31;
-    } else if (month === "feb") {
-        return day / 28;
-    } else if (month in ["apr", "jun", "sep", "nov"] || !month) {
-        return day / 30;
-    } else {
-        throw new Error("Bad Month");
-    }
-};
-
+/**
+ * Convierte días a años (usando un año de 365 días).
+ * @param day - Tiempo en días.
+ * @returns Tiempo en años.
+ */
 export const dayToYear = (day: number): number => {
     return day / 365;
 };

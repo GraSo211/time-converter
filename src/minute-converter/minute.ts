@@ -1,41 +1,54 @@
-// ms, s, min, h, d, w, m, y
-export const minuteToMiliSecond = (minute:number):number=>{
-    return minuteToSecond(minute) * 60;
-}
+/**
+ * Convierte minutos a milisegundos.
+ * @param minute - Tiempo en minutos.
+ * @returns Tiempo en milisegundos.
+ */
+export const minuteToMiliSecond = (minute: number): number => {
+    return minuteToSecond(minute) * 1000;
+};
 
-export const minuteToSecond = (minute:number):number=>{
-    return minute * 60
-}
+/**
+ * Convierte minutos a segundos.
+ * @param minute - Tiempo en minutos.
+ * @returns Tiempo en segundos.
+ */
+export const minuteToSecond = (minute: number): number => {
+    return minute * 60;
+};
 
+/**
+ * Convierte minutos a horas.
+ * @param minute - Tiempo en minutos.
+ * @returns Tiempo en horas.
+ */
+export const minuteToHour = (minute: number): number => {
+    return minute / 60;
+};
 
-export const minuteToHour = (minute:number):number=>{
-    return minute / 60
-}
+/**
+ * Convierte minutos a días.
+ * @param minute - Tiempo en minutos.
+ * @returns Tiempo en días.
+ */
+export const minuteToDay = (minute: number): number => {
+    return minuteToHour(minute) / 24;
+};
 
-export const minuteToDay = (minute:number):number=>{
-    return minuteToHour(minute) / 24
-}
+/**
+ * Convierte minutos a semanas.
+ * @param minute - Tiempo en minutos.
+ * @returns Tiempo en semanas.
+ */
+export const minuteToWeek = (minute: number): number => {
+    return minuteToDay(minute) / 7;
+};
 
-export const minuteToWeek = (minute:number):number=>{
-    return minuteToDay(minute) / 7
-}
-
-//jan feb mar apr may jun jul aug sep oct nov dec 
-export const minuteToMonth = (minute:number, month:string):number=>{
-    if(month in ["apr", "jun","sep", "nov"]){
-        return minuteToDay(minute) / 30
-    }else if(month in ["jan", "mar", "may","jul", "aug", "oct","dec"]){
-        return minuteToDay(minute) / 31
-
-    }else if(month === "feb"){
-        return minuteToDay(minute) / 28
-    }else{
-        throw new Error("Bad Month");
-    }
-
-}
-
-export const minuteToYear = (minute:number):number=>{
+/**
+ * Convierte minutos a años (usando un año de 365 días).
+ * @param minute - Tiempo en minutos.
+ * @returns Tiempo en años.
+ */
+export const minuteToYear = (minute: number): number => {
     return minuteToDay(minute) / 365;
-}
+};
 

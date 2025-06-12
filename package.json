@@ -1,15 +1,35 @@
 {
-  "name": "js-time-converter",
-  "version": "1.0.0",
-  "description": "Time Converter",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc && npx run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.8.3"
-  }
+    "name": "js-time-converter",
+    "version": "1.1.0",
+    "description": "Biblioteca para convertir y manipular formatos de tiempo fácilmente, compatible tanto con entornos de navegador como de Node.js.",
+    "keywords": [
+        "time",
+        "time-converter",
+        "converter",
+        "time-js",
+        "converter-time",
+        "date",
+        "time-utils",
+        "time-library",
+        "time-format",
+        "time-parser",
+        "js-time"
+    ],
+    "main": "dist-node/index.js",
+    "browser": "dist-node/index.js",
+    "scripts": {
+        "build-browser": "tsc src/index.ts --outDir dist-browser --module ES6",
+        "build-node": "tsc src/index.ts --outDir dist-node",
+        "build": "npm run build-browser & npm run build-node"
+    },
+    "author": "GraSo",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.8.3"
+    },
+    "homepage": "https://github.com/GraSo211/time-converter",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GraSo211/time-converter"
+    }
 }
