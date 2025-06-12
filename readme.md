@@ -27,9 +27,7 @@ Las funciones están organizadas en módulos separados, por ejemplo:
 ### Ejemplo
 
 ```ts
-import { minuteToMiliSecond, minuteToSecond, minuteToHour, minuteToDay } from "js-time-converter/minute-converter/minute";
-
-import { minuteToWeek, minuteToYear } from "js-time-converter/week-converter/week";
+import { minuteToMiliSecond, minuteToSecond, minuteToHour, minuteToDay, minuteToWeek, minuteToYear } from "js-time-converter";
 
 // Convierte 5 minutos a milisegundos
 console.log(minuteToMiliSecond(5)); // 300000
@@ -40,7 +38,7 @@ console.log(minuteToHour(120)); // 2
 // Convierte 10080 minutos a semanas
 console.log(minuteToWeek(10080)); // 1
 
-// Convierte 525600 minutos a años (aprox. 1 año)
+// Convierte 525600 minutos a años
 console.log(minuteToYear(525600)); // 1
 ```
 
