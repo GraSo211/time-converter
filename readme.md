@@ -24,7 +24,7 @@ Las funciones están organizadas en módulos separados, por ejemplo:
 -   `minute-converter/minute.ts` para conversiones desde minutos.
 -   `week-converter/week.ts` para conversiones relacionadas con semanas.
 
-### Ejemplo importando desde diferentes módulos
+### Ejemplo
 
 ```ts
 import { minuteToMiliSecond, minuteToSecond, minuteToHour, minuteToDay } from "js-time-converter/minute-converter/minute";
